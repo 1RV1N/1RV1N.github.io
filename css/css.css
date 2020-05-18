@@ -1,8 +1,8 @@
 *{margin:0;padding:0}
 
 @font-face {
-  font-family: Earth Orbiter;
-  src: url(../PortfolioFinal/earthorbiter.ttf);
+  font-family: Orbiter;
+  src: url(../earthorbiter.ttf) format('truetype');
 }
 
 html, body {
@@ -10,7 +10,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: Earth Orbiter;
+  font-family: Orbiter;
 }
 
 /*///////////////////////////// Animation  ///////////////////////////////////*/
@@ -625,7 +625,7 @@ background-position: 50% 30%;
         /*line-height: 150px;*/
       }
         .projectTitle h2{
-          font-family: Earth Orbiter;
+          font-family: Orbiter;
           font-size: 1.5em;
           width: 200%;
           margin-top: 25%;
@@ -678,7 +678,7 @@ background-position: 50% 30%;
         height: 150px;
         margin-top: 70px;
         font-size: 2em;
-        font-family: Earth Orbiter;
+        font-family: Orbiter;
       }
 
     .ProjectViewText{

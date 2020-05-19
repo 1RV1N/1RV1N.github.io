@@ -106,20 +106,44 @@ $(document).ready(function(){
   });
 
   $(document).on('click', '.pjs1', function() {
+    $('.pjs').css({'width':'80%','margin-left':'10%'});
+    $('.pjs1').css({'width':'90%','margin-left':'5%'});
     $('.ProjectView').addClass("displayNone");
     $('.Pnbr1').removeClass("displayNone"); 
+    $('.Pnbr1 .pvtImg').css({'transform':'translateX(-1700px)'});
+    setTimeout(function(){
+      $('.Pnbr1 .pvtImg').css({'transform':'translateX(0px)'});
+    },1);
   });
   $(document).on('click', '.pjs2', function() {
+    $('.pjs').css({'width':'80%','margin-left':'10%'});
+    $('.pjs2').css({'width':'90%','margin-left':'5%'});
     $('.ProjectView').addClass("displayNone");
     $('.Pnbr2').removeClass("displayNone");
+    $('.Pnbr2 .pvtImg').css({'transform':'translateX(-1700px)'});
+    setTimeout(function(){
+      $('.Pnbr2 .pvtImg').css({'transform':'translateX(0px)'});
+    },1);
   });
   $(document).on('click', '.pjs3', function() {
+    $('.pjs').css({'width':'80%','margin-left':'10%'});
+    $('.pjs3').css({'width':'90%','margin-left':'5%'});
     $('.ProjectView').addClass("displayNone");
     $('.Pnbr3').removeClass("displayNone");
+    $('.Pnbr3 .pvtImg').css({'transform':'translateX(-1700px)'});
+    setTimeout(function(){
+      $('.Pnbr3 .pvtImg').css({'transform':'translateX(0px)'});
+    },1);
   });
   $(document).on('click', '.pjs4', function() {
+    $('.pjs').css({'width':'80%','margin-left':'10%'});
+    $('.pjs4').css({'width':'90%','margin-left':'5%'});
     $('.ProjectView').addClass("displayNone");
     $('.Pnbr4').removeClass("displayNone");
+    $('.Pnbr4 .pvtImg').css({'transform':'translateX(-1700px)'});
+    setTimeout(function(){
+      $('.Pnbr4 .pvtImg').css({'transform':'translateX(0px)'});
+    },1);
   });
 
   ////////////////////////////////////////////////////////////////////////////
@@ -193,6 +217,7 @@ $(document).ready(function(){
       setTimeout(function(){
         $('.avatar').removeClass('displayNone');
         $('#avatarSpaceship').addClass('displayNone');
+
       },3350);
 
     },400);

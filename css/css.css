@@ -623,6 +623,7 @@ background-position: 50% 30%;
     width: 25%;
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
     z-index: 1;
+    overflow: auto;
   }
     .retour{
       height: 50px;
@@ -642,18 +643,34 @@ background-position: 50% 30%;
         transition: 0.4s;
       }
     .pjs{
-      width: 90%;
-      height: 20%;
+      width: 80%;
+      /*height: 20%;*/
       /*background-color: green;*/
-      margin-bottom: 5px;
-      margin-left: 5%;
+      padding-top: 25px;
+      border-top: solid 1px lightgrey;
+      margin-bottom: 25px;
+      margin-left: 10%;
       display: flex;
       flex-wrap: wrap;
       cursor: pointer;
+      transition: 0.1s;
+    }
+    .pjs1{
+      border:none;
+      width: 90%;
+      margin-left: 5%;
+    }
+    .pjs4{
+      margin-bottom: 0px;
+    }
+    .pjs:hover{
+      width: 90% !important;
+      margin-left: 5% !important;
+      transition: 0.1s;
     }
       .projectTitle{
         width: 40%;
-        height: 150px;
+        height: 130px;
         /*background-color: blue;*/
         overflow: visible;
         z-index: 1;
@@ -666,9 +683,9 @@ background-position: 50% 30%;
           margin-top: 25%;
           margin-bottom: 5px;
         }
+
         .projectTitleBorder{
           width: 100%;
-
         }
           .projectTitleBorder span{
             display: block;
@@ -685,12 +702,9 @@ background-position: 50% 30%;
           }
         .projectImg{
           width: 60%;
-          height: 150px;
+          height: 130px;
           background-color: lightblue;
         }
-      .pjs1{
-        margin-top: 20px;
-      }
   .ProjectView{
     background-color: #F2F2F2;
     height: 100%;
@@ -734,12 +748,13 @@ background-position: 50% 30%;
       background-color: white;
       position: relative;
       left: 55%;
-      transition: 0.4s;
-      box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
+      transition: 0.4s, transform 0.4s;
+      box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.3);
     }
     .pvtImg:hover{
       width: 55%;
       left: 45%;
+      box-shadow:  0px 0px 10px 1px rgba(0,0,0,0.3);
       transition: 0.4s;
     }
         .pvtImg img{

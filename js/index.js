@@ -84,8 +84,11 @@ $(document).ready(function(){
 
     if(keycode == '99' || keycode == '67' ){
        $('#pilotCardContainer').toggleClass("displayNone");
-       $('#pilotCardContainer').toggleClass("display");
     }
+    if(keycode == '27'){
+       $('#pilotCardContainer').addClass("displayNone");
+    }
+
     if(keycode == '118' || keycode == '86'){
       $link = $('.linkedin');
       $link[0].click()
@@ -150,17 +153,27 @@ $(document).ready(function(){
 
   $(document).on('click', '#earth3', function() {
     $('.hud').fadeOut('slow');
+
     setTimeout(function(){
+
       $('#inner-container').fadeOut('fast', function(){
         $("#inner-container").load("planeteC.html", function(){
           $('#inner-container').fadeIn('fast' );
         });
       });
+
       $(".followersvg").addClass('displayNone');
       $('#inner-container').css({"cursor":"auto"});
+
+      setTimeout(function(){
+        $('#shipLeg').css({'transform':'translateY(0px)'});
+      },1000);
+
       setTimeout(function(){
         $('.avatar').removeClass('displayNone');
-      },3300);
+        $('#avatarSpaceship').addClass('displayNone');
+      },3350);
+
     },400);
   });
 
@@ -175,8 +188,13 @@ $(document).ready(function(){
       $(".followersvg").addClass('displayNone');
       $('#inner-container').css({"cursor":"auto"});
       setTimeout(function(){
+        $('#shipLeg').css({'transform':'translateY(0px)'});
+      },1000);
+      setTimeout(function(){
         $('.avatar').removeClass('displayNone');
-      },3200);
+        $('#avatarSpaceship').addClass('displayNone');
+      },3350);
+
     },400);
   });
 
@@ -185,9 +203,8 @@ $(document).ready(function(){
 
   ///////////////////////////////////////////////////////////////////////
 
-  $(document).on('click', '.figure', function() {
-    // alert("just clicked");
-    tl.staggerTo(path, duration, stagger_opts_to, stagger_val);
+  $(document).on('click', '#pilotCard', function() {
+    $('#pilotCardContainer').toggleClass("displayNone");
   });
 
   $(document).on('mouseenter', '#galaxy2', function() {
@@ -216,7 +233,7 @@ $(document).ready(function(){
     $('#buildingShadow').attr("xlink:href", "asset/E7A16C9F.png");
   });
 
-  $(document).on('click', '.buildingPlanetC', function() {
+  $(document).on('click', '#buildingC', function() {
     $('.avatarC').css({"transform":" translateX(-1000px) scaleX(-1)"});
     // $('.avatarC').css({"left":"20%"});
     $('.avatarC').addClass('walk');
@@ -231,7 +248,6 @@ $(document).ready(function(){
   });
 
   $(document).on('click', '#spaceShipC', function() {
-    var href = 'index.html';
     $('.avatarC').css({"transform":" translateX(0px) scaleX(1)"});
     $('.avatarC').addClass('walk');
     setTimeout(function(){

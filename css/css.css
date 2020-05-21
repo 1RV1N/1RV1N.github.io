@@ -798,8 +798,9 @@ background-position: 50% 30%;
     overflow: hidden;
   }
   #pilotCardContainer img{
-    height: 40%;
+    height: 50%;
     overflow: hidden;
+    margin:5%;
   }
   #inner-container{
     display: none;
@@ -814,8 +815,12 @@ background-position: 50% 30%;
     overflow: hidden;
   }
   #pilotCardContainer img{
-    height: 20%;
+    height: 40%;
     overflow: hidden;
+    transform-origin:center; 
+    transform: rotate(90deg);
+    transition: 0.5s;
+    margin-top:40%;
   }
   #inner-container{
     display: none;

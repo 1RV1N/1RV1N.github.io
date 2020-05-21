@@ -798,7 +798,8 @@ background-position: 50% 30%;
     overflow: hidden;
   }
   #pilotCardContainer img{
-    height: 50%;
+    width: 90%;
+    height:auto;
     overflow: hidden;
     margin:5%;
   }
@@ -808,18 +809,18 @@ background-position: 50% 30%;
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
   .alertPhone{
     display: block;
     overflow: hidden;
   }
   #pilotCardContainer img{
-    height: 40%;
+    width: 98%;
     overflow: hidden;
     transform-origin:center; 
-    transform: rotate(90deg);
     transition: 0.5s;
+    margin:1%;
     margin-top:40%;
   }
   #inner-container{

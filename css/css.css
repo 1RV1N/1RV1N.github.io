@@ -13,6 +13,27 @@ html, body {
   font-family: Orbiter;
 }
 
+.ProjectViewText{
+  font-family: 'Work Sans', sans-serif;
+}
+.textHighlight{
+  color:#F7931E;
+}
+
+.alertPhone{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  /*display: none;*/
+  text-align: center;
+  color: #F7931E;
+}
+.alertPhone h2{
+  padding:2em 1em;
+}
+
 /*///////////////////////////// Animation  ///////////////////////////////////*/
 
 #shadow{
@@ -411,10 +432,10 @@ html, body {
     position: fixed;
     bottom: 10%;
     left: 5%;
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     border-radius: 150px;
-    padding: 10px;
+    padding: 20px;
     transition: 0.5s;
     animation: btnRotate 15s linear infinite;
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='black' stroke-width='2' stroke-dasharray='23%2c 12%2c 5' stroke-dashoffset='47' stroke-linecap='butt'/%3e%3c/svg%3e");
@@ -424,16 +445,17 @@ html, body {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(200,200,200,0.3);
     text-align: center;
-    line-height: 180px;
+    line-height: 160px;
     animation: btnRotateMinus 15s linear infinite;
   }
-
   .spaceMapGalaxy:hover{
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(200,200,200,0.5);
     transition: 0.5s;
   }
+  
+
 
 
 /*////////////////////////////    Galaxy   /////////////////////////////*/
@@ -692,7 +714,7 @@ background-position: 50% 30%;
             width: 30%;
             height: 3px;
             border-radius: 5px;
-            background: red;
+            background:#F7931E;
             margin-left: 65%;
           }
           .projectTitleBorder span:first-child{
@@ -703,7 +725,7 @@ background-position: 50% 30%;
         .projectImg{
           width: 60%;
           height: 130px;
-          background-color: lightblue;
+          background-color: lightgrey;
         }
   .ProjectView{
     background-color: #F2F2F2;

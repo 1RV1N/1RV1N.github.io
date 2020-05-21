@@ -791,20 +791,23 @@ background-position: 50% 30%;
 /*////////////////////////////    Planete C et D  /////////////////////////////*/
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) and (min-width: 701px) {
 
   .alertPhone{
     display: block;
     overflow: hidden;
   }
   #pilotCardContainer img{
-    width: 90%;
+    width: 65%;
     height:auto;
     overflow: hidden;
     margin:5%;
   }
   #inner-container{
     display: none;
+  }
+  .pilotCard img{
+    height: 15px;
   }
 
 }

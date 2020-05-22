@@ -231,7 +231,9 @@ $(document).ready(function(){
   $(document).on('click', '#pilotCard', function() {
     $('#pilotCardContainer').toggleClass("displayNone");
   });
-
+  $(document).on('click', '#pilotCardContainer', function() {
+    $('#pilotCardContainer').toggleClass("displayNone");
+  });
   $(document).on('mouseenter', '#galaxy2', function() {
     $('#galaxy3').css({"height":"1250px","width":"1250px"});
     $('#earth2').css({"transform":" translateX(-50px) scale(2.5,2.5) "});

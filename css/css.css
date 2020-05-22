@@ -616,7 +616,7 @@ background-position: 50% 30%;
   width: 120%;
 }
 #spaceShipC{
-  right:13%;
+  right:13% ;
   animation: landingC 3s linear /*cubic-bezier(0, 0, 0, 0.99)*/;
 }
 #spaceShipD{

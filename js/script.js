@@ -1,8 +1,8 @@
 ///////////////////////////////  Ecrito Anomation  /////////////////////////
 var tmax_optionsGlobal = {
-  repeat: -1,
-  repeatDelay: 5,
-  yoyo: true
+  repeat: 0,
+  // repeatDelay: 5,
+  // yoyo: true
 };
 
 CSSPlugin.useSVGTransformAttr = true;
@@ -10,7 +10,7 @@ CSSPlugin.useSVGTransformAttr = true;
 var tl = new TimelineMax(tmax_optionsGlobal),
     path = '.figure svg *',
     stagger_val = 0.0125,
-    duration = 0.75;
+    duration = 0.3;
 
 $.each($(path), function(i, el) {
   tl.set($(this), {
@@ -32,13 +32,13 @@ var stagger_opts_to = {
 };
 
 var $svg = $('svg');
-$svg.hover(
-  function() {
-    tl.timeScale(0.15);
-  },
-  function() {
-    tl.timeScale(1);
-  });
+// $svg.hover(
+//   function() {
+//     tl.timeScale(0.15);
+//   },
+//   function() {
+//     tl.timeScale(1);
+//   });
 
 tl.staggerTo(path, duration, stagger_opts_to, stagger_val);
 

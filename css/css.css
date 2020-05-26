@@ -264,7 +264,6 @@ html, body {
   transition: 0.5s;
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
   color: white;
-  
 }
 #planeteName2{
   width:100px;
@@ -606,7 +605,20 @@ background-position: 50% 30%;
   bottom: 30px;
   transition: transform 2.5s linear;
 }
+.SpaceShipName{
+  left: 60%;
+  border-radius: 3px;
+  width: 140px;
+  text-align: center;
+  padding-left: 0px;
+  padding:5px; 
+  font-size: 1.5em;
+}
 
+.spaceShip:hover .planeteName{
+  display: block;
+  transition: 0.5s;
+}
 .spaceShip{
   position: fixed;
   bottom: 55px;

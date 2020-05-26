@@ -617,7 +617,7 @@ background-position: 50% 30%;
 
 .spaceShip:hover .planeteName{
   display: block;
-  transition: 0.5s;
+  transition: 1s;
 }
 .spaceShip{
   position: fixed;

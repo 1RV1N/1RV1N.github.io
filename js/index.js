@@ -307,8 +307,7 @@ $(document).ready(function(){
           $(".followersvg").removeClass('displayNone');
         },500);
       },3000);
-
-    };
+    }
   });
 
   /////////////////////////////////////////// Planete D /////////////////////////////

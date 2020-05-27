@@ -275,10 +275,10 @@ $(document).ready(function(){
   });
 
   $(document).on('click', '#spaceShipC', function() {
-    $('.avatarC').css({"transform":" translateX(0px) scaleX(1)"});
-    $('.avatarC').addClass('walk');
-    setTimeout(function(){
-      $('.avatarC').removeClass('walk');
+
+    var positionAvatar = $('.avatarC').css("transform");
+
+    if ( positionAvatar == "matrix(-1, 0, 0, 1, 0, 0)"){
       setTimeout(function(){
         $('#inner-container').css({"cursor":"none"});
         $('.hud').fadeIn('slow');
@@ -288,9 +288,27 @@ $(document).ready(function(){
           });
         });
         $(".followersvg").removeClass('displayNone');
+      },10);
+    } else {
 
-      },500);
-    },3000);
+      $('.avatarC').css({"transform":" translateX(0px) scaleX(1)"});
+      $('.avatarC').addClass('walk');
+
+      setTimeout(function(){
+        $('.avatarC').removeClass('walk');
+        setTimeout(function(){
+          $('#inner-container').css({"cursor":"none"});
+          $('.hud').fadeIn('slow');
+          $('#inner-container').fadeOut('fast', function(){
+            $("#inner-container").load("galaxy.html", function(){
+              $('#inner-container').fadeIn('fast' );
+            });
+          });
+          $(".followersvg").removeClass('displayNone');
+        },500);
+      },3000);
+
+    };
   });
 
   /////////////////////////////////////////// Planete D /////////////////////////////
@@ -315,11 +333,10 @@ $(document).ready(function(){
   });
 
   $(document).on('click', '#spaceShipD', function() {
-    var href = 'index.html';
-    $('.avatarD').css({"transform":" translateX(0px) scaleX(-1) scale(0.8)"});
-    $('.avatarD').addClass('walk');
-    setTimeout(function(){
-      $('.avatarD').removeClass('walk');
+    
+    var positionAvatar = $('.avatarD').css("transform");
+
+    if ( positionAvatar == "matrix(0.8, 0, 0, 0.8, 0, 0)"){
       setTimeout(function(){
         $('#inner-container').css({"cursor":"none"});
         $('.hud').fadeIn('slow');
@@ -329,9 +346,28 @@ $(document).ready(function(){
           });
         });
         $(".followersvg").removeClass('displayNone');
+      },10);
 
-      },500);
-    },2500);
+    } else {
+
+      $('.avatarD').css({"transform":" translateX(0px) scaleX(-1) scale(0.8)"});
+      $('.avatarD').addClass('walk');
+      setTimeout(function(){
+        $('.avatarD').removeClass('walk');
+        setTimeout(function(){
+          $('#inner-container').css({"cursor":"none"});
+          $('.hud').fadeIn('slow');
+          $('#inner-container').fadeOut('fast', function(){
+            $("#inner-container").load("galaxy.html", function(){
+              $('#inner-container').fadeIn('fast' );
+            });
+          });
+          $(".followersvg").removeClass('displayNone');
+
+        },500);
+      },2500);
+
+    };
   });
 
 

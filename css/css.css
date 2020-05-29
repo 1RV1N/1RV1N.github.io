@@ -174,7 +174,7 @@ html, body {
 }
 
 .projetImgClick1{
-  animation: ProjetImgClickUn 0.5s steps(3);
+  animation: ProjetImgClickUn 0.3s steps(3);
 }
 
 .projetImgClick2{
@@ -741,10 +741,8 @@ background-position: 50% 30%;
       .projectTitle{
         width: 40%;
         height: 130px;
-        /*background-color: blue;*/
         overflow: visible;
         z-index: 1;
-        /*line-height: 150px;*/
       }
         .projectTitle h2{
           font-family: Orbiter;

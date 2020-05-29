@@ -121,7 +121,7 @@ $(document).ready(function(){
     setTimeout(function(){
       $('.pjs1 .projectImg').removeClass('projetImgClick1');
       $('.pjs1 .projectImg').addClass('projetImgClick2');
-    },490);
+    },290);
 
     $('.ProjectView').addClass("displayNone");
     $('.Pnbr1').removeClass("displayNone"); 
@@ -140,7 +140,7 @@ $(document).ready(function(){
     setTimeout(function(){
       $('.pjs2 .projectImg').removeClass('projetImgClick1');
       $('.pjs2 .projectImg').addClass('projetImgClick2');
-    },490);
+    },290);
 
     $('.ProjectView').addClass("displayNone");
     $('.Pnbr2').removeClass("displayNone");
@@ -158,7 +158,7 @@ $(document).ready(function(){
     setTimeout(function(){
       $('.pjs3 .projectImg').removeClass('projetImgClick1');
       $('.pjs3 .projectImg').addClass('projetImgClick2');
-    },490);
+    },290);
 
     $('.ProjectView').addClass("displayNone");
     $('.Pnbr3').removeClass("displayNone");
@@ -176,7 +176,7 @@ $(document).ready(function(){
     setTimeout(function(){
       $('.pjs4 .projectImg').removeClass('projetImgClick1');
       $('.pjs4 .projectImg').addClass('projetImgClick2');
-    },490);
+    },290);
 
     $('.ProjectView').addClass("displayNone");
     $('.Pnbr4').removeClass("displayNone");

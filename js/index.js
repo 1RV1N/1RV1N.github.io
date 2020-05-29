@@ -105,9 +105,24 @@ $(document).ready(function(){
     $('.ProjectContainer').addClass("displayNone");
   });
 
+  $(document).on('mouseenter', '.pjs', function() {
+    $(this).find('.projectImg').addClass('projetImgClick');
+  });
+  $(document).on('mouseleave', '.pjs', function() {
+    $(this).find('.projectImg').removeClass('projetImgClick');
+  });
+
   $(document).on('click', '.pjs1', function() {
-    $('.pjs').css({'width':'80%','margin-left':'10%'});
-    $('.pjs1').css({'width':'90%','margin-left':'5%'});
+    $('.pjs').css({'width':'85%','margin-left':'7.5%'});
+    $('.pjs1').css({'width':'95%','margin-left':'2.5%'});
+
+    $('.projectImg').removeClass('projetImgClick2');
+    $('.pjs1 .projectImg').addClass('projetImgClick1');
+    setTimeout(function(){
+      $('.pjs1 .projectImg').removeClass('projetImgClick1');
+      $('.pjs1 .projectImg').addClass('projetImgClick2');
+    },490);
+
     $('.ProjectView').addClass("displayNone");
     $('.Pnbr1').removeClass("displayNone"); 
     $('.Pnbr1 .pvtImg').css({'transform':'translateX(-1700px)'});
@@ -115,9 +130,18 @@ $(document).ready(function(){
       $('.Pnbr1 .pvtImg').css({'transform':'translateX(0px)'});
     },1);
   });
+
   $(document).on('click', '.pjs2', function() {
-    $('.pjs').css({'width':'80%','margin-left':'10%'});
-    $('.pjs2').css({'width':'90%','margin-left':'5%'});
+    $('.pjs').css({'width':'85%','margin-left':'7.5%'});
+    $('.pjs2').css({'width':'95%','margin-left':'2.5%'});
+
+    $('.projectImg').removeClass('projetImgClick2');
+    $('.pjs2 .projectImg').addClass('projetImgClick1');
+    setTimeout(function(){
+      $('.pjs2 .projectImg').removeClass('projetImgClick1');
+      $('.pjs2 .projectImg').addClass('projetImgClick2');
+    },490);
+
     $('.ProjectView').addClass("displayNone");
     $('.Pnbr2').removeClass("displayNone");
     $('.Pnbr2 .pvtImg').css({'transform':'translateX(-1700px)'});
@@ -126,8 +150,16 @@ $(document).ready(function(){
     },1);
   });
   $(document).on('click', '.pjs3', function() {
-    $('.pjs').css({'width':'80%','margin-left':'10%'});
-    $('.pjs3').css({'width':'90%','margin-left':'5%'});
+    $('.pjs').css({'width':'85%','margin-left':'7.5%'});
+    $('.pjs3').css({'width':'95%','margin-left':'2.5%'});
+
+    $('.projectImg').removeClass('projetImgClick2');
+    $('.pjs3 .projectImg').addClass('projetImgClick1');
+    setTimeout(function(){
+      $('.pjs3 .projectImg').removeClass('projetImgClick1');
+      $('.pjs3 .projectImg').addClass('projetImgClick2');
+    },490);
+
     $('.ProjectView').addClass("displayNone");
     $('.Pnbr3').removeClass("displayNone");
     $('.Pnbr3 .pvtImg').css({'transform':'translateX(-1700px)'});
@@ -136,8 +168,16 @@ $(document).ready(function(){
     },1);
   });
   $(document).on('click', '.pjs4', function() {
-    $('.pjs').css({'width':'80%','margin-left':'10%'});
-    $('.pjs4').css({'width':'90%','margin-left':'5%'});
+    $('.pjs').css({'width':'85%','margin-left':'7.5%'});
+    $('.pjs4').css({'width':'95%','margin-left':'2.5%'});
+
+    $('.projectImg').removeClass('projetImgClick2');
+    $('.pjs4 .projectImg').addClass('projetImgClick1');
+    setTimeout(function(){
+      $('.pjs4 .projectImg').removeClass('projetImgClick1');
+      $('.pjs4 .projectImg').addClass('projetImgClick2');
+    },490);
+
     $('.ProjectView').addClass("displayNone");
     $('.Pnbr4').removeClass("displayNone");
     $('.Pnbr4 .pvtImg').css({'transform':'translateX(-1700px)'});

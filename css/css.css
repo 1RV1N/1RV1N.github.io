@@ -119,6 +119,18 @@ html, body {
   from {background-position-x:0px;}
   to {background-position-x:-445px;}
 }
+@keyframes ProjetImgClickUn {
+  from {background-position-x:0px;}
+  to {background-position-x:-648.4px;}
+}
+@keyframes ProjetImgClickDeux {
+  from {background-position-x:-648.4px;}
+  to {background-position-x:-1729px;}
+}
+@keyframes hoverProjetImgClick {
+  from {background-position-x:0px;}
+  to {background-position-x:-1729px;}
+}
 
 @keyframes avatarMove {
   0% { transform: translateX(0) scaleX(-1); }
@@ -155,6 +167,18 @@ html, body {
 
 .walk{
   animation: avatarWalk 0.7s steps(5) infinite ;
+}
+
+.projetImgClick{
+  animation: hoverProjetImgClick 0.7s steps(8) infinite;
+}
+
+.projetImgClick1{
+  animation: ProjetImgClickUn 0.5s steps(3);
+}
+
+.projetImgClick2{
+  animation: ProjetImgClickDeux 0.7s steps(5) infinite;
 }
 
 .legUp{
@@ -662,30 +686,39 @@ background-position: 50% 30%;
     overflow: auto;
   }
     .retour{
-      height: 50px;
-      line-height: 50px;
-      width: 90%;
+      height: 30px;
+      line-height: 30px;
+      width: 95%;
       cursor: pointer;
-      margin-left:5%; 
+      padding-left: 5%; 
       transition: 0.4s;
-      /*background-color: red;*/
+      background-color: white;
+      box-shadow: 0 0px 2px 0px rgba(0,0,0,0.3);
+      z-index: 2;
     }
       .retour svg{
-        height: 30px;
-        margin-top: 10px;
+        height: 20px;
+        margin-top: 5px;
       }
       .retour:hover{
-        margin-left: 2%;
-        transition: 0.4s;
+        box-shadow: 0 0px 5px 0px rgba(0,0,0,0.3);
+        padding-left: 2%;
+        width: 98%;
       }
+
+    .pjsContainer{
+      height: calc(100% - 30px);
+      overflow: auto;
+    }
+
     .pjs{
-      width: 80%;
+      width: 85%;
       /*height: 20%;*/
       /*background-color: green;*/
       padding-top: 25px;
       border-top: solid 1px lightgrey;
       margin-bottom: 25px;
-      margin-left: 10%;
+      margin-left: 7.5%;
       display: flex;
       flex-wrap: wrap;
       cursor: pointer;
@@ -693,15 +726,16 @@ background-position: 50% 30%;
     }
     .pjs1{
       border:none;
-      width: 90%;
-      margin-left: 5%;
+      width: 95%;
+      margin-left: 2.5%;
+      margin-top: 30px;
     }
     .pjs4{
       margin-bottom: 0px;
     }
     .pjs:hover{
-      width: 90% !important;
-      margin-left: 5% !important;
+      width: 95% !important;
+      margin-left: 2.5% !important;
       transition: 0.1s;
     }
       .projectTitle{
@@ -714,8 +748,7 @@ background-position: 50% 30%;
       }
         .projectTitle h2{
           font-family: Orbiter;
-          font-size: 1.5em;
-          width: 200%;
+          font-size: 1.3em;
           margin-top: 25%;
           margin-bottom: 5px;
         }
@@ -737,9 +770,9 @@ background-position: 50% 30%;
             width: 45%;
           }
         .projectImg{
-          width: 60%;
-          height: 130px;
-          background-color: lightgrey;
+          width: 216.125px;
+          height: 128px;
+          background : url(../asset/projetImg.png);
         }
   .ProjectView{
     background-color: #F2F2F2;
@@ -802,6 +835,30 @@ background-position: 50% 30%;
 
 
 /*////////////////////////////    Planete C et D  /////////////////////////////*/
+
+@media only screen and (min-width: 1701px) and (max-width: 1900px) {
+  .projectImg{
+    transform : scale(0.8);
+  }
+  .projectTitle{
+    width: 35%;
+    /*background-color: red;*/
+  }
+  .projectTitle h2{
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 1700px) {
+  .projectImg{
+    transform : scale(0.7);
+  }
+  .projectTitle{
+    width: 30%;
+  }
+  .projectTitle h2{
+    font-size: 1.2em;
+  }
+}
 
 @media only screen and (min-width: 1001px) and (max-width: 1400px) {
   .ProjectViewText{

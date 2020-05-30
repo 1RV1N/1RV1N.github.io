@@ -317,6 +317,12 @@ $(document).ready(function(){
     }
   });
 
+  $(document).on('click', '.pvtImg', function() {
+    $('.pvtImg').toggleClass('pvtImgAll');
+    $('.pvtImg img').toggleClass('pvtImgAllImg');
+    $('body').toggleClass('noJquery');
+  });
+
   /////////////////////////////////////////// Planete D /////////////////////////////
 
   $(document).on('mouseenter', '#buildingD' , function() {

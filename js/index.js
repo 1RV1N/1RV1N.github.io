@@ -235,27 +235,49 @@ $(document).ready(function(){
 
   ///////////////////////////////////////////////////////////////////////
 
+  function myFunction(x) {
+    if (x.matches) { // If media query matches
+
+      $(document).on('click', '.retour', function() {
+        $('.hud').fadeIn('slow');
+        $('#inner-container').fadeOut('fast', function(){
+          $("#inner-container").load("galaxy.html", function(){
+            $('#inner-container').fadeIn('fast' );
+          });
+        });
+      });
+
+
+
+    } else {
+      
+      $(document).on('mouseenter', '#galaxy2', function() {
+        $('#galaxy3').css({"height":"1250px","width":"1250px"});
+        $('#earth2').css({"transform":" translateX(-50px) scale(2.5,2.5) "});
+      });
+      $(document).on('mouseleave', '#galaxy2', function() {
+        $('#galaxy3').css({"height":"750px","width":"750px"});
+        $('#earth2').css({"transform":"scale(1,1)"});
+      });
+      $(document).on('mouseenter', '#galaxy3', function() {
+        $('#galaxy3').css({"height":"1250px","width":"1250px"});
+        $('#earth3').css({"transform":" translateX(-100px) scale(2.5,2.5) "});
+      });
+      $(document).on('mouseleave', '#galaxy3', function() {
+        $('#galaxy3').css({"height":"750px","width":"750px"});
+        $('#earth3').css({"transform":"scale(1,1)"});
+      });
+    }
+  }
+  var x = window.matchMedia("(max-width: 1000px)")
+  myFunction(x) 
+  x.addListener(myFunction) 
+
   $(document).on('click', '#pilotCard', function() {
     $('#pilotCardContainer').toggleClass("displayNone");
   });
   $(document).on('click', '#pilotCardContainer', function() {
     $('#pilotCardContainer').toggleClass("displayNone");
-  });
-  $(document).on('mouseenter', '#galaxy2', function() {
-    $('#galaxy3').css({"height":"1250px","width":"1250px"});
-    $('#earth2').css({"transform":" translateX(-50px) scale(2.5,2.5) "});
-  });
-  $(document).on('mouseleave', '#galaxy2', function() {
-    $('#galaxy3').css({"height":"750px","width":"750px"});
-    $('#earth2').css({"transform":"scale(1,1)"});
-  });
-  $(document).on('mouseenter', '#galaxy3', function() {
-    $('#galaxy3').css({"height":"1250px","width":"1250px"});
-    $('#earth3').css({"transform":" translateX(-100px) scale(2.5,2.5) "});
-  });
-  $(document).on('mouseleave', '#galaxy3', function() {
-    $('#galaxy3').css({"height":"750px","width":"750px"});
-    $('#earth3').css({"transform":"scale(1,1)"});
   });
 
   /////////////////////////////////////////// Planete C /////////////////////////////

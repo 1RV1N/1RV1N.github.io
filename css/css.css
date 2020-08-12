@@ -22,11 +22,12 @@ html, body {
 
 .alertPhone{
   position: absolute;
-  z-index: 10;
+  top: 30%;
+/*  z-index: 10;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.3);
-  /*display: none;*/
+  background-color: rgba(0,0,0,0.3);*/
+  display: none;
   text-align: center;
   color: #F7931E;
   display: none;
@@ -193,17 +194,25 @@ html, body {
   position: fixed;
   bottom: 40px;
   right: 40px;
+  height: 50px;
+  width: 300Px;
   z-index: 11;
   cursor: pointer;
+  background-image:url(../asset/cartePilote.png); 
+  background-position: center; 
+  background-size: 100%; 
+  background-repeat: no-repeat; 
 }
   .pilotCard img{
     height:28px;
   }
 #contacter{
   bottom: 80px;
+  background-image:url(../asset/contacter.png); 
 }
 #linkedin{
   bottom: 120px;
+  background-image:url(../asset/linkedin.png); 
 }
 .pilotCardPlanet{
   background-color: rgba(20,20,20,0.6);
@@ -899,31 +908,18 @@ background-position: 50% 30%;
 
 @media only screen and (min-width: 701px) and (max-width: 1000px)  {
 
-  .alertPhone{
-    display: block;
-    overflow: hidden;
-  }
+  
   #pilotCardContainer img{
     width: 65%;
     height:auto;
     overflow: hidden;
     margin:5%;
   }
-  #inner-container{
-    display: none;
-  }
-  .pilotCard img{
-    height: 15px;
-  }
 
 }
 
 @media only screen and (max-width: 700px) {
 
-  .alertPhone{
-    display: block;
-    overflow: hidden;
-  }
   #pilotCardContainer img{
     width: 98%;
     overflow: hidden;
@@ -932,8 +928,298 @@ background-position: 50% 30%;
     margin:1%;
     margin-top:40%;
   }
-  #inner-container{
+}
+
+@media only screen and (max-width: 1000px) {
+  .asteroName {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    left: 0;
+    top: 2%;
+    height: auto;
+  }
+  .figure,#follower{
+    display: none!important;
+  }
+
+  .pilotCard{
+    width: 55px;
+    height: 65px;
+    background-image:url(../asset/cv.svg); 
+    bottom: 90px;
+  }
+
+  #linkedin{
+    background-image:url(../asset/linkedin.svg); 
+    bottom: 230px;
+  }
+  #contacter{
+    background-image:url(../asset/contacter.svg); 
+    bottom: 160px;
+  }
+
+  .alertPhone{
+    display: block;
+  }
+  .spaceMapContainer{
+    bottom: 5%;
+    left: calc(50% - 35px);
+  }
+  .spaceMap{
+    width: 70px;
+    height: 70px;
+  }
+  .innerSpaceMap{
+    line-height: 70px;
+  }
+
+  .spaceMapGalaxy{
+    bottom: 5%;
+    left: calc(50% - 45px);
+    width: 70px;
+    height: 70px;
+  }
+
+  .innerSpaceMapGalaxy{
+    line-height: 70px;
+  }
+
+
+.planeteName{
+  position: relative;
+  left: -25px;
+  top: 85px;
+  display: block;
+  width:130px;
+  padding: 0;
+  text-align: center;
+  background-color: rgba(0,0,0,0);
+  border-radius: 3px;
+  border:solid 1px rgba(247,147,30,1);
+  transform: scale(0.9);
+}
+
+#planeteName2{
+  width: 120px;
+  left: -10px;
+  top: 110px;
+  transform: scale(1.2);
+}
+
+  #galaxy {
     display: none;
   }
+  #galaxy2{
+  height: 20%;
+  width: 100%;
+  border-radius: 0px;
+  background-color: rgba(100,100,200,0.0);
+  margin: auto;
+  position: absolute;
+  transition: 0.5s;
+  top: 90px; left: 0; bottom: auto; right: 0;
+}
+  #galaxy2:hover{
+    height: 20%;
+    width: 100%;
+    transition: 0.5s;
+  }
+  #earth2{
+    position: relative;
+    top:auto;left:auto;bottom:auto;right:auto;
+    margin: auto;
+    transform: scale(2.6);
+}
+  #earth2:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    border-radius: 50%;
+    box-shadow: -25px 5px 25px 3px rgba(0,0,0,.9) inset;
+  }
+  #earth2:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    opacity: .2;
+    border-radius: 50%;
+    background: radial-gradient(circle at 33px 33px, #fff, #000);
+  }
+  #earth2:hover{
+    box-shadow: 2px 0px 15px 2px rgba(0, 0, 0, 1);
+    transition: 1s;
+  }
+
+#galaxy3{
+  height: 20%;
+  width: 100%;
+  border-radius: 0px;
+  background-color: rgba(100,200,100,0.0);
+  margin: auto;
+  position: absolute;
+  transition: 0.5s;
+  top: 340px; left: 0; bottom: auto; right: 0;
+}
+#galaxy3:hover{
+    height: 20%;
+    width: 100%;
+    transition: 0.5s;
+  }
+  #earth3 {
+    position: relative;
+    top:auto;left:auto;bottom:auto;right:auto;
+    margin: auto;
+    transform: scale(1.5);
+  }
+  #earth3:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    border-radius: 50%;
+    box-shadow: -8px 0px 20px 3px rgba(0,0,0,.9) inset;
+  }
+  #earth3:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    opacity: .2;
+    border-radius: 50%;
+    background: radial-gradient(circle at 33px 33px, #fff, #000);
+  }
+  #earth3:hover{
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 1);
+    transition: 1s;
+  }
+
+
+
+  /*///////////////////////////////////////////////////*/
+
+  .layout,.buildingPlanetC,.buildingPlanetD,.spaceShip,.avatar{
+    display: none;
+  }
+
+  .ProjectContainer{
+    display: block!important;
+    position: fixed;
+    width: 95%;
+    height: 95vh;
+    margin-left: 2.5%;
+    margin-top: 2.5vh;
+    background-color: rgb(200,200,200);
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+    .ProjectSelect{
+      background-color: rgb(240,239,241);
+      height: 35%;
+      width: 100%;
+      z-index: 1;
+      overflow: auto;
+
+          box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.3);
+    }
+      .retour{
+        height: 30px;
+        line-height: 30px;
+        width: 95%;
+        cursor: pointer;
+        padding-left: 5%; 
+        transition: 0.4s;
+        background-color: white;
+        box-shadow: 0 0px 2px 0px rgba(0,0,0,0.3);
+        z-index: 2;
+      }
+        .retour svg{
+          height: 20px;
+          margin-top: 5px;
+        }
+        .retour:hover{
+          box-shadow: 0 0px 5px 0px rgba(0,0,0,0.3);
+          padding-left: 2%;
+          width: 98%;
+        }
+
+      .pjsContainer{
+        height: 85%;
+        overflow: auto;
+        background-color: rgb(240,239,241);
+      }
+        .pjs{
+          padding: 0;
+          width: 95%;
+          margin-left: 2.5%;
+          margin-bottom: 0;
+          flex-wrap: wrap;
+        }
+        .projectTitle{
+          width: 47%;
+        }
+        .projectImg {
+          width: 53%;
+          position: relative;
+          right: 0px;
+          transform: scale(0.6);
+        }
+    .ProjectView{
+      width: 100%;
+      height: 66%;
+    }
+    .ProjectViewHeader{
+      position:static;
+      background-color: rgb(230,229,231);
+    }
+    .pjh{
+      width: 100%;
+      font-size: 1.6em;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      height: auto;
+    }
+    .ProjectViewText{
+      height:auto;
+      width: 100%;
+      position:static;
+      background-color: rgb(230,229,231);
+    }
+    .pvt1 p{
+      padding: 10px;
+    }
+    .iconContainer{
+     position:static;
+     width: 100%;
+     background-color: rgb(230,229,231);
+     height: auto;
+    }
+    .icon{
+      background-color: rgb(230,229,231);
+    }
+
+    .pvtImg{
+      width: 100%;
+      left: 0;
+      height: auto;
+    }
+
+
+
+
 
 }
